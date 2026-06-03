@@ -46,6 +46,10 @@ Expected files inside the timestamped folder:
 - `trading_scanner_report.py`
 - `report-data.json`
 - `trading-report.html`
+- `README.md`
+
+The `README.md` inside each timestamped folder must include the GitHub Pages URL for that run's HTML report using this pattern:
+`https://haikubits.github.io/TradingReports/Artifacts/YYYY-MM-DD_HH-MM/trading-report.html`
 
 ## Default Market Universe
 
@@ -82,9 +86,10 @@ Unless the user specifies otherwise, use:
    - clustered support and resistance levels
 5. Score each ticker and select the top setups by conviction.
 6. Build a self-contained HTML report with inline CSS and inline JavaScript.
-7. Write both HTML and JSON outputs into the same timestamped artifact folder.
-8. Verify the result before handing it back.
-9. Commit the timestamped folder under `Artifacts/` and push it to `main` in the `TradingReports` repository.
+7. Write the HTML, JSON, and per-run `README.md` outputs into the same timestamped artifact folder.
+8. In that `README.md`, include the GitHub Pages URL for `trading-report.html` in the same run folder.
+9. Verify the result before handing it back.
+10. Commit the timestamped folder under `Artifacts/` and push it to `main` in the `TradingReports` repository.
 
 ## Python Execution Guidance
 
@@ -101,7 +106,9 @@ mkdir -p "$OUT_DIR"
 python3 "$OUT_DIR/trading_scanner_report.py"
 ```
 
-The script itself should write `report-data.json` and `trading-report.html` into the same `OUT_DIR`.
+The script itself should write `report-data.json`, `trading-report.html`, and `README.md` into the same `OUT_DIR`.
+The generated `README.md` should contain the GitHub Pages URL:
+`https://haikubits.github.io/TradingReports/Artifacts/$REPORT_TS/trading-report.html`
 
 ### For targeted validation
 
@@ -165,6 +172,8 @@ ATR projection levels should be labeled with source `ATR Projection` and should 
 Before finalizing, validate all of the following inside the selected timestamped folder:
 - `report-data.json` exists and is non-empty
 - `trading-report.html` exists and is non-empty
+- `README.md` exists and is non-empty
+- `README.md` contains the GitHub Pages URL for the same run folder's `trading-report.html`
 - `failures` is empty when data fetches succeed
 - each selected stock has `len(levels['up']) == 3`
 - each selected stock has `len(levels['down']) == 3`
@@ -181,6 +190,9 @@ from pathlib import Path
 report_ts = os.environ['REPORT_TS']
 base = Path(f'codeRefs/TradingReports/Artifacts/{report_ts}')
 report = json.loads((base / 'report-data.json').read_text())
+readme = (base / 'README.md').read_text()
+expected_url = f'https://haikubits.github.io/TradingReports/Artifacts/{report_ts}/trading-report.html'
+assert expected_url in readme, expected_url
 for stock in report['top_picks']:
     assert len(stock['levels']['up']) == 3, stock['ticker']
     assert len(stock['levels']['down']) == 3, stock['ticker']
@@ -215,6 +227,7 @@ When committing, make sure the final commit message starts with `TradingReports:
 When the workflow completes, return:
 - the timestamped output folder used for the run
 - the output artifact locations
+- the GitHub Pages URL for the HTML report
 - confirmation that the artifacts were committed and pushed under `Artifacts/`
 - the top picks
 - the average conviction
