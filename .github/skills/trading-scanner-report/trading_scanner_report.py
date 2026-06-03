@@ -1190,13 +1190,25 @@ document.querySelectorAll('.level-row').forEach((row) => {{
 </html>'''
 
 
+def generate_run_readme() -> str:
+    run_folder = OUTPUT_DIR.name
+    report_url = f"https://haikubits.github.io/TradingReports/Artifacts/{run_folder}/trading-report.html"
+    return (
+        "# Trading Scanner Report\n\n"
+        f"GitHub Pages report link: {report_url}\n"
+    )
+
+
 def write_outputs(report_data: dict[str, Any]) -> None:
     json_path = OUTPUT_DIR / "report-data.json"
     html_path = OUTPUT_DIR / "trading-report.html"
+    readme_path = OUTPUT_DIR / "README.md"
     with json_path.open("w", encoding="utf-8") as handle:
         json.dump(report_data, handle, indent=2)
     with html_path.open("w", encoding="utf-8") as handle:
         handle.write(generate_html(report_data))
+    with readme_path.open("w", encoding="utf-8") as handle:
+        handle.write(generate_run_readme())
 
 
 if __name__ == "__main__":
@@ -1206,6 +1218,7 @@ if __name__ == "__main__":
     print(json.dumps({
         "json": str(OUTPUT_DIR / "report-data.json"),
         "html": str(OUTPUT_DIR / "trading-report.html"),
+        "readme": str(OUTPUT_DIR / "README.md"),
         "top_picks": [item["ticker"] for item in report["top_picks"]],
         "avg_conviction": report["avg_conviction"],
         "failures": report["failures"],
