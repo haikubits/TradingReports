@@ -1,0 +1,14 @@
+{
+  "json": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-19_03-06/report-data.json",
+  "html": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-19_03-06/trading-report.html",
+  "readme": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-19_03-06/README.md",
+  "top_picks": [
+    "AAPL",
+    "QQQ",
+    "AMD",
+    "TSLA",
+    "AMZN"
+  ],
+  "avg_conviction": 80,
+  "failures": []
+}
