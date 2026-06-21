@@ -1,0 +1,14 @@
+{
+  "report_ts": "2026-06-21_03-06",
+  "output_dir": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-21_03-06",
+  "top_picks": [
+    "AAPL",
+    "QQQ",
+    "AMD",
+    "TSLA",
+    "META"
+  ],
+  "avg_conviction": 82,
+  "failures": [],
+  "selected_count": 5
+}
