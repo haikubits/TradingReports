@@ -1,0 +1,52 @@
+{
+  "report_ts": "2026-06-28_03-05",
+  "output_dir": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-28_03-05",
+  "json_path": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-28_03-05/report-data.json",
+  "html_path": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-28_03-05/trading-report.html",
+  "script_path": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-28_03-05/trading_scanner_report.py",
+  "run_output_path": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-28_03-05/run-output.json",
+  "top_picks": [],
+  "avg_conviction": 0,
+  "failures": [
+    {
+      "ticker": "SPY",
+      "error": "Invalid close data returned for SPY"
+    },
+    {
+      "ticker": "QQQ",
+      "error": "Invalid close data returned for QQQ"
+    },
+    {
+      "ticker": "NVDA",
+      "error": "Invalid close data returned for NVDA"
+    },
+    {
+      "ticker": "TSLA",
+      "error": "Invalid close data returned for TSLA"
+    },
+    {
+      "ticker": "AAPL",
+      "error": "Invalid close data returned for AAPL"
+    },
+    {
+      "ticker": "AMZN",
+      "error": "Invalid close data returned for AMZN"
+    },
+    {
+      "ticker": "META",
+      "error": "Invalid close data returned for META"
+    },
+    {
+      "ticker": "MSFT",
+      "error": "Invalid close data returned for MSFT"
+    },
+    {
+      "ticker": "AMD",
+      "error": "Invalid close data returned for AMD"
+    },
+    {
+      "ticker": "GOOGL",
+      "error": "Invalid close data returned for GOOGL"
+    }
+  ]
+}

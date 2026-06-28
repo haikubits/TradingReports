@@ -1,0 +1,57 @@
+{
+  "generated_at": "Saturday 11:06 PM ET",
+  "generated_at_iso": "2026-06-28T03:06:59.759382+00:00",
+  "session_date": "Monday, June 29, 2026",
+  "vix": 0.0,
+  "vix_regime": "low",
+  "spy_trend": "Unknown",
+  "spy_sma_pos": "Unknown",
+  "fed_speakers": [],
+  "economic_events": [],
+  "scanned_count": 10,
+  "passed_count": 0,
+  "avg_conviction": 0,
+  "top_picks": [],
+  "failures": [
+    {
+      "ticker": "SPY",
+      "error": "Invalid close data returned for SPY"
+    },
+    {
+      "ticker": "QQQ",
+      "error": "Invalid close data returned for QQQ"
+    },
+    {
+      "ticker": "NVDA",
+      "error": "Invalid close data returned for NVDA"
+    },
+    {
+      "ticker": "TSLA",
+      "error": "Invalid close data returned for TSLA"
+    },
+    {
+      "ticker": "AAPL",
+      "error": "Invalid close data returned for AAPL"
+    },
+    {
+      "ticker": "AMZN",
+      "error": "Invalid close data returned for AMZN"
+    },
+    {
+      "ticker": "META",
+      "error": "Invalid close data returned for META"
+    },
+    {
+      "ticker": "MSFT",
+      "error": "Invalid close data returned for MSFT"
+    },
+    {
+      "ticker": "AMD",
+      "error": "Invalid close data returned for AMD"
+    },
+    {
+      "ticker": "GOOGL",
+      "error": "Invalid close data returned for GOOGL"
+    }
+  ]
+}
