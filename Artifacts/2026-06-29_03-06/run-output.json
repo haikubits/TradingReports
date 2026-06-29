@@ -1,0 +1,18 @@
+{
+  "run_ts": "2026-06-29_03-06",
+  "out_dir": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-06-29_03-06",
+  "script_exit_code": 0,
+  "json_exists": true,
+  "html_exists": true,
+  "top_picks": [
+    "MSFT",
+    "TSLA",
+    "SPY",
+    "AAPL",
+    "AMZN"
+  ],
+  "avg_conviction": 77,
+  "failures": [],
+  "passed_count": 10,
+  "scanned_count": 10
+}
