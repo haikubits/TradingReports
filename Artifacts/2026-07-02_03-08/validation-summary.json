@@ -1,0 +1,19 @@
+{
+  "report_dir": "Artifacts/2026-07-02_03-08",
+  "top_picks": [
+    "META",
+    "QQQ",
+    "AAPL",
+    "SPY",
+    "NVDA"
+  ],
+  "avg_conviction": 72,
+  "failures": [],
+  "atr_projection_counts": {
+    "META": 0,
+    "QQQ": 0,
+    "AAPL": 0,
+    "SPY": 0,
+    "NVDA": 0
+  }
+}
