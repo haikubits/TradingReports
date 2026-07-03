@@ -1,0 +1,16 @@
+{
+  "report_ts": "2026-07-03_03-06",
+  "output_dir": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-07-03_03-06",
+  "json": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-07-03_03-06/report-data.json",
+  "html": "/home/appuser/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-07-03_03-06/trading-report.html",
+  "top_picks": [
+    "AAPL",
+    "META",
+    "AMZN",
+    "SPY",
+    "QQQ"
+  ],
+  "avg_conviction": 73,
+  "failures": [],
+  "selected_count": 5
+}
