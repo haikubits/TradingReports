@@ -1,0 +1,13 @@
+{
+  "report_ts": "2026-07-14_03-06",
+  "top_picks": [
+    "AAPL",
+    "SPY",
+    "GOOGL",
+    "NVDA",
+    "QQQ"
+  ],
+  "avg_conviction": 77,
+  "failures": [],
+  "selected_count": 5
+}
