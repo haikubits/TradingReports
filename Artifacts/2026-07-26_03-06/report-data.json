@@ -1,0 +1,806 @@
+{
+  "generated_at": "Saturday 11:08 PM ET",
+  "generated_at_iso": "2026-07-26T03:08:14.731366+00:00",
+  "session_date": "Monday, July 27, 2026",
+  "vix": 0.0,
+  "vix_regime": "low",
+  "spy_trend": "Range",
+  "spy_sma_pos": "Above",
+  "fed_speakers": [],
+  "economic_events": [],
+  "scanned_count": 10,
+  "passed_count": 9,
+  "avg_conviction": 77,
+  "top_picks": [
+    {
+      "ticker": "AMZN",
+      "company_name": "Amazon.com, Inc.",
+      "conviction": 83,
+      "trend": "Downtrend",
+      "trend_strength": 0.72,
+      "bias": "Bearish",
+      "reasons": [
+        "Trend: Downtrend (18/25)",
+        "200 SMA: Below (aligned) (15/15)",
+        "Volume: 0.87x avg (5/15)",
+        "RSI: 40 (15/15)",
+        "ATR: 3.0% (15/15)",
+        "Options vol: 116,928 (15/15)"
+      ],
+      "price": 233.66,
+      "change": -11.19,
+      "change_pct": -4.57,
+      "rsi": 40.5,
+      "atr_pct": 3.0,
+      "vol_ratio": 0.87,
+      "vol_label": "Below Avg",
+      "sma200_pos": "Below",
+      "vwap_pos": "Above",
+      "pc_ratio": 0.8,
+      "options_total_volume": 116928,
+      "trend_breakdown": {
+        "direction": "Downtrend",
+        "strength": 0.72
+      },
+      "mas": {
+        "sma200": 234.53,
+        "sma50": 249.9,
+        "ema20": 244.96,
+        "ema8": 244.31
+      },
+      "volume": {
+        "ratio": 0.87,
+        "label": "Below Avg",
+        "today": 47465300,
+        "avg20": 54630490
+      },
+      "vwap": 232.71,
+      "ntz": {
+        "pm_high": 235.55,
+        "pm_low": 233.2,
+        "yd_high": 248.45,
+        "yd_low": 242.45,
+        "ntz_upper": 248.45,
+        "ntz_lower": 233.2
+      },
+      "levels": {
+        "up": [
+          {
+            "price": 234.0,
+            "sources": [
+              "60-min S/R (1 touches)",
+              "Daily S/R (3 touches)"
+            ],
+            "touches": 4,
+            "confidence": 59,
+            "source_summary": "60-min S/R (1 touches) + Daily S/R (3 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches), Daily S/R (3 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $234.50 and the broken level can flip into support."
+          },
+          {
+            "price": 234.5,
+            "sources": [
+              "200 SMA (Daily)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "200 SMA (Daily)",
+            "reasoning": "Created by 200 SMA (Daily). Moving averages act as dynamic support and resistance watched by systematic participants. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $235.00 and the broken level can flip into support."
+          },
+          {
+            "price": 235.0,
+            "sources": [
+              "60-min S/R (1 touches)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "60-min S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ],
+        "down": [
+          {
+            "price": 233.0,
+            "sources": [
+              "Pre-market Low"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Pre-market Low",
+            "reasoning": "Created by Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $232.00 and the broken level can flip into resistance."
+          },
+          {
+            "price": 232.0,
+            "sources": [
+              "60-min S/R (3 touches)"
+            ],
+            "touches": 3,
+            "confidence": 35,
+            "source_summary": "60-min S/R (3 touches)",
+            "reasoning": "Created by 60-min S/R (3 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $231.50 and the broken level can flip into resistance."
+          },
+          {
+            "price": 231.5,
+            "sources": [
+              "Daily S/R (4 touches)"
+            ],
+            "touches": 4,
+            "confidence": 38,
+            "source_summary": "Daily S/R (4 touches)",
+            "reasoning": "Created by Daily S/R (4 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ]
+      },
+      "indicator_chips": [
+        {
+          "label": "200 SMA",
+          "value": "Below"
+        },
+        {
+          "label": "VWAP",
+          "value": "Above"
+        },
+        {
+          "label": "ORB",
+          "value": "Pending"
+        },
+        {
+          "label": "Volume",
+          "value": "Below Avg"
+        },
+        {
+          "label": "Trend",
+          "value": "Downtrend"
+        }
+      ],
+      "reasoning_cards": [
+        {
+          "title": "Trend Structure",
+          "body": "The daily chart is in downtrend mode with 0.72 strength. Price is below the 200 SMA at $234.53, and the 8 EMA at $244.31 is below the 20 EMA at $244.96, showing softer momentum. RSI is 40.5, which is still in a healthy operating range."
+        },
+        {
+          "title": "Level Confluence",
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $234.00 at 59% confidence from 60-min S/R (1 touches), Daily S/R (3 touches). Average spacing is $0.70 which gives tight room for quicker scalp-style risk-to-reward planning."
+        },
+        {
+          "title": "Catalyst / Risk",
+          "body": "ATR is 3.0%, supportive of normal next-session expansion without being disorderly. Put/call volume ratio is 0.80, which is fairly balanced for sentiment context. \u26a0 Relative volume is only 0.87x the 20-day average, so follow-through may need confirmation after the open. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
+        }
+      ],
+      "ntz_comment": "Wide NTZ at 6.53% of price. Wait for a clean breakout beyond the box before forcing entries."
+    },
+    {
+      "ticker": "TSLA",
+      "company_name": "Tesla, Inc.",
+      "conviction": 81,
+      "trend": "Downtrend",
+      "trend_strength": 0.72,
+      "bias": "Bearish",
+      "reasons": [
+        "Trend: Downtrend (18/25)",
+        "200 SMA: Below (aligned) (15/15)",
+        "Volume: 2.7x avg (15/15)",
+        "RSI: 29 (10/15)",
+        "ATR: 5.5% (8/15)",
+        "Options vol: 392,203 (15/15)"
+      ],
+      "price": 319.69,
+      "change": -54.32,
+      "change_pct": -14.52,
+      "rsi": 29.0,
+      "atr_pct": 5.5,
+      "vol_ratio": 2.7,
+      "vol_label": "2x Avg",
+      "sma200_pos": "Below",
+      "vwap_pos": "Above",
+      "pc_ratio": 0.81,
+      "options_total_volume": 392203,
+      "trend_breakdown": {
+        "direction": "Downtrend",
+        "strength": 0.72
+      },
+      "mas": {
+        "sma200": 415.41,
+        "sma50": 404.97,
+        "ema20": 385.42,
+        "ema8": 369.43
+      },
+      "volume": {
+        "ratio": 2.7,
+        "label": "2x Avg",
+        "today": 115606400,
+        "avg20": 42885730
+      },
+      "vwap": 312.08,
+      "ntz": {
+        "pm_high": 325.29,
+        "pm_low": 319.69,
+        "yd_high": 380.17,
+        "yd_low": 372.9,
+        "ntz_upper": 380.17,
+        "ntz_lower": 319.69
+      },
+      "levels": {
+        "up": [
+          {
+            "price": 324.0,
+            "sources": [
+              "60-min S/R (1 touches)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "60-min S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $325.50 and the broken level can flip into support."
+          },
+          {
+            "price": 325.5,
+            "sources": [
+              "Pre-market High"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Pre-market High",
+            "reasoning": "Created by Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $329.50 and the broken level can flip into support."
+          },
+          {
+            "price": 329.5,
+            "sources": [
+              "Daily S/R (1 touches)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Daily S/R (1 touches)",
+            "reasoning": "Created by Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ],
+        "down": [
+          {
+            "price": 319.5,
+            "sources": [
+              "60-min S/R (1 touches)",
+              "Daily S/R (1 touches)",
+              "Pre-market Low"
+            ],
+            "touches": 3,
+            "confidence": 74,
+            "source_summary": "60-min S/R (1 touches) + Daily S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches), Daily S/R (1 touches), Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, the next target is $307.50 and the broken level can flip into resistance."
+          },
+          {
+            "price": 307.5,
+            "sources": [
+              "60-min S/R (1 touches)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "60-min S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $302.50 and the broken level can flip into resistance."
+          },
+          {
+            "price": 302.5,
+            "sources": [
+              "Daily S/R (1 touches)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Daily S/R (1 touches)",
+            "reasoning": "Created by Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ]
+      },
+      "indicator_chips": [
+        {
+          "label": "200 SMA",
+          "value": "Below"
+        },
+        {
+          "label": "VWAP",
+          "value": "Above"
+        },
+        {
+          "label": "ORB",
+          "value": "Pending"
+        },
+        {
+          "label": "Volume",
+          "value": "2x Avg"
+        },
+        {
+          "label": "Trend",
+          "value": "Downtrend"
+        }
+      ],
+      "reasoning_cards": [
+        {
+          "title": "Trend Structure",
+          "body": "The daily chart is in downtrend mode with 0.72 strength. Price is below the 200 SMA at $415.41, and the 8 EMA at $369.43 is below the 20 EMA at $385.42, showing softer momentum. RSI is 29.0, which is oversold and vulnerable to rebounds."
+        },
+        {
+          "title": "Level Confluence",
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $319.50 at 74% confidence from 60-min S/R (1 touches), Daily S/R (1 touches), Pre-market Low. Average spacing is $5.40 which gives wide room for swing-style risk-to-reward planning."
+        },
+        {
+          "title": "Catalyst / Risk",
+          "body": "\u26a0 ATR is 5.5% which signals a wider-than-normal range; trim size if you trade it. \u26a0 RSI at 29.0 is in an extreme zone, so continuation trades need tighter invalidation. Put/call volume ratio is 0.81, which is fairly balanced for sentiment context. Relative volume is 2.70x the 20-day average, showing tradable participation. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
+        }
+      ],
+      "ntz_comment": "Wide NTZ at 18.92% of price. Wait for a clean breakout beyond the box before forcing entries."
+    },
+    {
+      "ticker": "QQQ",
+      "company_name": "Invesco QQQ Trust",
+      "conviction": 74,
+      "trend": "Downtrend",
+      "trend_strength": 0.56,
+      "bias": "Neutral-Bearish",
+      "reasons": [
+        "Trend: Downtrend (14/25)",
+        "200 SMA: Above (counter-trend) (5/15)",
+        "Volume: 1.15x avg (10/15)",
+        "RSI: 41 (15/15)",
+        "ATR: 1.9% (15/15)",
+        "Options vol: 902,555 (15/15)"
+      ],
+      "price": 691.96,
+      "change": -13.39,
+      "change_pct": -1.9,
+      "rsi": 41.1,
+      "atr_pct": 1.9,
+      "vol_ratio": 1.15,
+      "vol_label": "Above Avg",
+      "sma200_pos": "Above",
+      "vwap_pos": "Above",
+      "pc_ratio": 1.19,
+      "options_total_volume": 902555,
+      "trend_breakdown": {
+        "direction": "Downtrend",
+        "strength": 0.56
+      },
+      "mas": {
+        "sma200": 642.79,
+        "sma50": 718.75,
+        "ema20": 710.67,
+        "ema8": 704.0
+      },
+      "volume": {
+        "ratio": 1.15,
+        "label": "Above Avg",
+        "today": 44028600,
+        "avg20": 38361385
+      },
+      "vwap": 686.96,
+      "ntz": {
+        "pm_high": 694.48,
+        "pm_low": 688.78,
+        "yd_high": 709.65,
+        "yd_low": 703.62,
+        "ntz_upper": 709.65,
+        "ntz_lower": 688.78
+      },
+      "levels": {
+        "up": [
+          {
+            "price": 694.5,
+            "sources": [
+              "60-min S/R (4 touches)",
+              "Daily S/R (2 touches)",
+              "Pre-market High"
+            ],
+            "touches": 7,
+            "confidence": 89,
+            "source_summary": "60-min S/R (4 touches) + Daily S/R (2 touches)",
+            "reasoning": "Created by 60-min S/R (4 touches), Daily S/R (2 touches), Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. High confluence - multiple independent sources confirm this level. If it breaks cleanly, the next target is $699.00 and the broken level can flip into support."
+          },
+          {
+            "price": 699.0,
+            "sources": [
+              "60-min S/R (1 touches)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "60-min S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $702.50 and the broken level can flip into support."
+          },
+          {
+            "price": 702.5,
+            "sources": [
+              "60-min S/R (3 touches)",
+              "Daily S/R (1 touches)"
+            ],
+            "touches": 4,
+            "confidence": 56,
+            "source_summary": "60-min S/R (3 touches) + Daily S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (3 touches), Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ],
+        "down": [
+          {
+            "price": 691.5,
+            "sources": [
+              "60-min S/R (1 touches)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "60-min S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $688.50 and the broken level can flip into resistance."
+          },
+          {
+            "price": 688.5,
+            "sources": [
+              "60-min S/R (1 touches)",
+              "Pre-market Low"
+            ],
+            "touches": 2,
+            "confidence": 48,
+            "source_summary": "60-min S/R (1 touches) + Pre-market Low",
+            "reasoning": "Created by 60-min S/R (1 touches), Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $683.50 and the broken level can flip into resistance."
+          },
+          {
+            "price": 683.5,
+            "sources": [
+              "60-min S/R (1 touches)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "60-min S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ]
+      },
+      "indicator_chips": [
+        {
+          "label": "200 SMA",
+          "value": "Above"
+        },
+        {
+          "label": "VWAP",
+          "value": "Above"
+        },
+        {
+          "label": "ORB",
+          "value": "Pending"
+        },
+        {
+          "label": "Volume",
+          "value": "Above Avg"
+        },
+        {
+          "label": "Trend",
+          "value": "Downtrend"
+        }
+      ],
+      "reasoning_cards": [
+        {
+          "title": "Trend Structure",
+          "body": "The daily chart is in downtrend mode with 0.56 strength. Price is above the 200 SMA at $642.79, and the 8 EMA at $704.00 is below the 20 EMA at $710.67, showing softer momentum. RSI is 41.1, which is still in a healthy operating range."
+        },
+        {
+          "title": "Level Confluence",
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $694.50 at 89% confidence from 60-min S/R (4 touches), Daily S/R (2 touches), Pre-market High. Average spacing is $3.80 which gives balanced room for workable intraday risk-to-reward planning."
+        },
+        {
+          "title": "Catalyst / Risk",
+          "body": "ATR is 1.9%, supportive of normal next-session expansion without being disorderly. Put/call volume ratio is 1.19, which is fairly balanced for sentiment context. Relative volume is 1.15x the 20-day average, showing tradable participation. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
+        }
+      ],
+      "ntz_comment": "Wide NTZ at 3.02% of price. Wait for a clean breakout beyond the box before forcing entries."
+    },
+    {
+      "ticker": "NVDA",
+      "company_name": "NVIDIA Corporation",
+      "conviction": 74,
+      "trend": "Uptrend",
+      "trend_strength": 0.67,
+      "bias": "Bullish",
+      "reasons": [
+        "Trend: Uptrend (16/25)",
+        "200 SMA: Above (aligned) (15/15)",
+        "Volume: 0.83x avg (5/15)",
+        "RSI: 62 (15/15)",
+        "ATR: 3.5% (8/15)",
+        "Options vol: 568,919 (15/15)"
+      ],
+      "price": 208.76,
+      "change": -3.3,
+      "change_pct": -1.56,
+      "rsi": 62.1,
+      "atr_pct": 3.5,
+      "vol_ratio": 0.83,
+      "vol_label": "Below Avg",
+      "sma200_pos": "Above",
+      "vwap_pos": "Above",
+      "pc_ratio": 0.74,
+      "options_total_volume": 568919,
+      "trend_breakdown": {
+        "direction": "Uptrend",
+        "strength": 0.67
+      },
+      "mas": {
+        "sma200": 192.8,
+        "sma50": 209.46,
+        "ema20": 205.77,
+        "ema8": 207.46
+      },
+      "volume": {
+        "ratio": 0.83,
+        "label": "Below Avg",
+        "today": 110505300,
+        "avg20": 133840385
+      },
+      "vwap": 208.03,
+      "ntz": {
+        "pm_high": 208.99,
+        "pm_low": 206.1,
+        "yd_high": 214.39,
+        "yd_low": 204.95,
+        "ntz_upper": 214.39,
+        "ntz_lower": 204.95
+      },
+      "levels": {
+        "up": [
+          {
+            "price": 209.0,
+            "sources": [
+              "Pre-market High"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Pre-market High",
+            "reasoning": "Created by Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $209.50 and the broken level can flip into support."
+          },
+          {
+            "price": 209.5,
+            "sources": [
+              "50 SMA (Daily)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "50 SMA (Daily)",
+            "reasoning": "Created by 50 SMA (Daily). Moving averages act as dynamic support and resistance watched by systematic participants. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $210.00 and the broken level can flip into support."
+          },
+          {
+            "price": 210.0,
+            "sources": [
+              "60-min S/R (2 touches)"
+            ],
+            "touches": 2,
+            "confidence": 35,
+            "source_summary": "60-min S/R (2 touches)",
+            "reasoning": "Created by 60-min S/R (2 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ],
+        "down": [
+          {
+            "price": 208.5,
+            "sources": [
+              "60-min S/R (1 touches)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "60-min S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $207.50 and the broken level can flip into resistance."
+          },
+          {
+            "price": 207.5,
+            "sources": [
+              "8 EMA (Daily)"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "8 EMA (Daily)",
+            "reasoning": "Created by 8 EMA (Daily). Moving averages act as dynamic support and resistance watched by systematic participants. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $207.00 and the broken level can flip into resistance."
+          },
+          {
+            "price": 207.0,
+            "sources": [
+              "60-min S/R (6 touches)",
+              "Daily S/R (1 touches)"
+            ],
+            "touches": 7,
+            "confidence": 68,
+            "source_summary": "60-min S/R (6 touches) + Daily S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (6 touches), Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ]
+      },
+      "indicator_chips": [
+        {
+          "label": "200 SMA",
+          "value": "Above"
+        },
+        {
+          "label": "VWAP",
+          "value": "Above"
+        },
+        {
+          "label": "ORB",
+          "value": "Pending"
+        },
+        {
+          "label": "Volume",
+          "value": "Below Avg"
+        },
+        {
+          "label": "Trend",
+          "value": "Uptrend"
+        }
+      ],
+      "reasoning_cards": [
+        {
+          "title": "Trend Structure",
+          "body": "The daily chart is in uptrend mode with 0.67 strength. Price is above the 200 SMA at $192.80, and the 8 EMA at $207.46 is above the 20 EMA at $205.77, confirming momentum. RSI is 62.1, which is still in a healthy operating range."
+        },
+        {
+          "title": "Level Confluence",
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $207.00 at 68% confidence from 60-min S/R (6 touches), Daily S/R (1 touches). Average spacing is $0.60 which gives tight room for quicker scalp-style risk-to-reward planning."
+        },
+        {
+          "title": "Catalyst / Risk",
+          "body": "\u26a0 ATR is 3.5% which signals a wider-than-normal range; trim size if you trade it. Put/call volume ratio is 0.74, which is fairly balanced for sentiment context. \u26a0 Relative volume is only 0.83x the 20-day average, so follow-through may need confirmation after the open. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
+        }
+      ],
+      "ntz_comment": "Wide NTZ at 4.52% of price. Wait for a clean breakout beyond the box before forcing entries."
+    },
+    {
+      "ticker": "SPY",
+      "company_name": "SPDR S&P 500 ETF Trust",
+      "conviction": 72,
+      "trend": "Range",
+      "trend_strength": 0.5,
+      "bias": "Neutral",
+      "reasons": [
+        "Trend: Range (12/25)",
+        "200 SMA: Above (counter-trend) (5/15)",
+        "Volume: 1.14x avg (10/15)",
+        "RSI: 45 (15/15)",
+        "ATR: 1.0% (15/15)",
+        "Options vol: 1,761,646 (15/15)"
+      ],
+      "price": 738.18,
+      "change": -9.23,
+      "change_pct": -1.23,
+      "rsi": 44.7,
+      "atr_pct": 1.0,
+      "vol_ratio": 1.14,
+      "vol_label": "Above Avg",
+      "sma200_pos": "Above",
+      "vwap_pos": "Below",
+      "pc_ratio": 1.17,
+      "options_total_volume": 1761646,
+      "trend_breakdown": {
+        "direction": "Range",
+        "strength": 0.5
+      },
+      "mas": {
+        "sma200": 698.21,
+        "sma50": 745.05,
+        "ema20": 745.81,
+        "ema8": 745.48
+      },
+      "volume": {
+        "ratio": 1.14,
+        "label": "Above Avg",
+        "today": 55437300,
+        "avg20": 48502795
+      },
+      "vwap": 739.55,
+      "ntz": {
+        "pm_high": 741.02,
+        "pm_low": 737.62,
+        "yd_high": 750.02,
+        "yd_low": 746.37,
+        "ntz_upper": 750.02,
+        "ntz_lower": 737.62
+      },
+      "levels": {
+        "up": [
+          {
+            "price": 741.5,
+            "sources": [
+              "60-min S/R (8 touches)",
+              "Pre-market High"
+            ],
+            "touches": 9,
+            "confidence": 69,
+            "source_summary": "60-min S/R (8 touches) + Pre-market High",
+            "reasoning": "Created by 60-min S/R (8 touches), Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, the next target is $745.00 and the broken level can flip into support."
+          },
+          {
+            "price": 745.0,
+            "sources": [
+              "50 SMA (Daily)",
+              "8 EMA (Daily)"
+            ],
+            "touches": 2,
+            "confidence": 48,
+            "source_summary": "50 SMA (Daily) + 8 EMA (Daily)",
+            "reasoning": "Created by 50 SMA (Daily), 8 EMA (Daily). Moving averages act as dynamic support and resistance watched by systematic participants. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $747.00 and the broken level can flip into support."
+          },
+          {
+            "price": 747.0,
+            "sources": [
+              "60-min S/R (13 touches)",
+              "Daily S/R (1 touches)",
+              "20 EMA (Daily)",
+              "Yesterday Low"
+            ],
+            "touches": 16,
+            "confidence": 87,
+            "source_summary": "60-min S/R (13 touches) + Daily S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (13 touches), Daily S/R (1 touches), 20 EMA (Daily), Yesterday Low. Previous session extremes often mark the boundary of yesterday's buyer and seller battle. High confluence - multiple independent sources confirm this level. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ],
+        "down": [
+          {
+            "price": 737.5,
+            "sources": [
+              "Pre-market Low"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Pre-market Low",
+            "reasoning": "Created by Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $736.00 and the broken level can flip into resistance."
+          },
+          {
+            "price": 736.0,
+            "sources": [
+              "60-min S/R (4 touches)"
+            ],
+            "touches": 4,
+            "confidence": 39,
+            "source_summary": "60-min S/R (4 touches)",
+            "reasoning": "Created by 60-min S/R (4 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $732.50 and the broken level can flip into resistance."
+          },
+          {
+            "price": 732.5,
+            "sources": [
+              "60-min S/R (1 touches)",
+              "Daily S/R (1 touches)"
+            ],
+            "touches": 2,
+            "confidence": 48,
+            "source_summary": "60-min S/R (1 touches) + Daily S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches), Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+          }
+        ]
+      },
+      "indicator_chips": [
+        {
+          "label": "200 SMA",
+          "value": "Above"
+        },
+        {
+          "label": "VWAP",
+          "value": "Below"
+        },
+        {
+          "label": "ORB",
+          "value": "Pending"
+        },
+        {
+          "label": "Volume",
+          "value": "Above Avg"
+        },
+        {
+          "label": "Trend",
+          "value": "Range"
+        }
+      ],
+      "reasoning_cards": [
+        {
+          "title": "Trend Structure",
+          "body": "The daily chart is in range mode with 0.50 strength. Price is above the 200 SMA at $698.21, and the 8 EMA at $745.48 is below the 20 EMA at $745.81, showing softer momentum. RSI is 44.7, which is still in a healthy operating range."
+        },
+        {
+          "title": "Level Confluence",
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $747.00 at 87% confidence from 60-min S/R (13 touches), Daily S/R (1 touches), 20 EMA (Daily), Yesterday Low. Average spacing is $2.90 which gives tight room for quicker scalp-style risk-to-reward planning."
+        },
+        {
+          "title": "Catalyst / Risk",
+          "body": "ATR is 1.0%, supportive of normal next-session expansion without being disorderly. Put/call volume ratio is 1.17, which is fairly balanced for sentiment context. Relative volume is 1.14x the 20-day average, showing tradable participation. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
+        }
+      ],
+      "ntz_comment": "Wide NTZ at 1.68% of price. Wait for a clean breakout beyond the box before forcing entries."
+    }
+  ],
+  "failures": []
+}
