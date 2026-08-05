@@ -1,0 +1,14 @@
+{
+  "report_ts": "2026-08-05_03-05",
+  "out_dir": "/root/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-08-05_03-05",
+  "pages_url": "https://haikubits.github.io/TradingReports/Artifacts/2026-08-05_03-05/trading-report.html",
+  "top_picks": [
+    "SPY",
+    "GOOGL",
+    "NVDA",
+    "AAPL",
+    "QQQ"
+  ],
+  "avg_conviction": 78,
+  "failures": []
+}
