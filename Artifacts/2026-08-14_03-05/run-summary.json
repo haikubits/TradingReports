@@ -1,0 +1,14 @@
+{
+  "json": "/root/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-08-14_03-05/report-data.json",
+  "html": "/root/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-08-14_03-05/trading-report.html",
+  "readme": "/root/sreagent/terminalRoot/codeRefs/TradingReports/Artifacts/2026-08-14_03-05/README.md",
+  "top_picks": [
+    "QQQ",
+    "SPY",
+    "NVDA",
+    "AAPL",
+    "META"
+  ],
+  "avg_conviction": 76,
+  "failures": []
+}
