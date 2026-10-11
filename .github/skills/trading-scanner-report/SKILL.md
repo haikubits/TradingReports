@@ -102,19 +102,22 @@ Capture the timestamp once and use it for the whole run:
 REPORT_TS=$(date -u +%Y-%m-%d_%H-%M)
 REPO_ROOT="codeRefs/TradingReports"
 OUT_DIR="$REPO_ROOT/Artifacts/$REPORT_TS"
-mkdir -p "$OUT_DIR"
+test ! -e "$OUT_DIR" && mkdir -p "$OUT_DIR"
+cp "$REPO_ROOT/.github/skills/trading-scanner-report/trading_scanner_report.py" "$OUT_DIR/trading_scanner_report.py"
 python3 "$OUT_DIR/trading_scanner_report.py"
 ```
 
-The script itself should write `report-data.json`, `trading-report.html`, and `README.md` into the same `OUT_DIR`.
-The generated `README.md` should contain the GitHub Pages URL:
+When invoked as a registered skill, copy the registered generator instead of the repository copy. Do not overwrite an existing run folder.
+The repository generator writes `report-data.json`, `trading-report.html`, and `README.md` into `OUT_DIR`.
+The registered generator may write only JSON and HTML. If `README.md` is absent, create it in `OUT_DIR` with the GitHub Pages URL for the same run:
 `https://haikubits.github.io/TradingReports/Artifacts/$REPORT_TS/trading-report.html`
+Check that a clean run passes `git diff --cached --check`; if it does not, fix the generated output before committing.
 
 ### For targeted validation
 
 Use a short heredoc:
 ```bash
-REPORT_TS="YYYY-MM-DD_HH-MM"
+export REPORT_TS="YYYY-MM-DD_HH-MM"
 python3 - <<'PY'
 import json
 import os
@@ -158,8 +161,8 @@ The level engine must try structural levels first:
 - clustered 60-minute pivots
 - clustered daily pivots
 - moving averages
-- yesterday high and low
-- premarket high and low
+- last completed session high and low
+- last completed session premarket high and low (historical, not next-session premarket)
 
 If there are fewer than 3 valid upside or downside levels, backfill with ATR-based projection levels so that every selected stock still ends with exactly:
 - 3 upside levels
@@ -174,7 +177,9 @@ Before finalizing, validate all of the following inside the selected timestamped
 - `trading-report.html` exists and is non-empty
 - `README.md` exists and is non-empty
 - `README.md` contains the GitHub Pages URL for the same run folder's `trading-report.html`
-- `failures` is empty when data fetches succeed
+- `failures` is empty when data fetches succeed; check the latest candle date against the last completed session
+- the previous-session high/low are drawn from the last completed daily candle, not the candle before it
+- prior pre-market levels are identified as historical; next-session pre-market levels are not available in an evening run
 - each selected stock has `len(levels['up']) == 3`
 - each selected stock has `len(levels['down']) == 3`
 - the HTML includes the average conviction summary text
@@ -182,7 +187,7 @@ Before finalizing, validate all of the following inside the selected timestamped
 
 Example validation snippet:
 ```bash
-REPORT_TS="YYYY-MM-DD_HH-MM"
+export REPORT_TS="YYYY-MM-DD_HH-MM"
 python3 - <<'PY'
 import json
 import os
@@ -211,15 +216,17 @@ Example flow:
 REPORT_TS="YYYY-MM-DD_HH-MM"
 cd codeRefs/TradingReports
 git add "Artifacts/$REPORT_TS"
+git diff --cached --check
 if ! git diff --cached --quiet; then
-  git commit -m "TradingReports: Add scanner artifacts for $REPORT_TS"
-  git commit --amend --no-edit -m "TradingReports: Add scanner artifacts for $REPORT_TS
-
-Co-authored-by: Azure SRE Agent <noreply@microsoft.com>"
+  git commit -m "TradingReports: Add scanner artifacts for $REPORT_TS" \
+    -m "Co-authored-by: Azure SRE Agent <noreply@microsoft.com>"
   git push origin main
+  git rev-parse HEAD
+  git ls-remote origin refs/heads/main
 fi
 ```
 
+Confirm the two commit hashes match. Never amend a published commit.
 When committing, make sure the final commit message starts with `TradingReports:` and includes the required co-author trailer.
 
 ## Response Guidance
