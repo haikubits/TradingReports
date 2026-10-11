@@ -1,6 +1,6 @@
 {
-  "generated_at": "Saturday 11:06 PM ET",
-  "generated_at_iso": "2026-10-11T03:06:45.864025+00:00",
+  "generated_at": "Saturday 11:08 PM ET",
+  "generated_at_iso": "2026-10-11T03:08:29.281411+00:00",
   "session_date": "Monday, October 12, 2026",
   "vix": 14.8,
   "vix_regime": "low",
@@ -58,13 +58,23 @@
       "ntz": {
         "pm_high": 256.88,
         "pm_low": 254.69,
-        "yd_high": 259.86,
-        "yd_low": 253.78,
-        "ntz_upper": 259.86,
-        "ntz_lower": 253.78
+        "yd_high": 262.8,
+        "yd_low": 256.0,
+        "ntz_upper": 262.8,
+        "ntz_lower": 254.69
       },
       "levels": {
         "up": [
+          {
+            "price": 263.0,
+            "sources": [
+              "Previous Session High"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Previous Session High",
+            "reasoning": "Created by Previous Session High. Previous session extremes often mark the boundary of the last session's buyer and seller battle. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $264.00 and the broken level can flip into support."
+          },
           {
             "price": 264.0,
             "sources": [
@@ -83,17 +93,7 @@
             "touches": 2,
             "confidence": 35,
             "source_summary": "Daily S/R (2 touches)",
-            "reasoning": "Created by Daily S/R (2 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $272.50 and the broken level can flip into support."
-          },
-          {
-            "price": 272.5,
-            "sources": [
-              "Daily S/R (1 touches)"
-            ],
-            "touches": 1,
-            "confidence": 35,
-            "source_summary": "Daily S/R (1 touches)",
-            "reasoning": "Created by Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+            "reasoning": "Created by Daily S/R (2 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
           }
         ],
         "down": [
@@ -101,13 +101,12 @@
             "price": 260.0,
             "sources": [
               "60-min S/R (3 touches)",
-              "Daily S/R (1 touches)",
-              "Yesterday High"
+              "Daily S/R (1 touches)"
             ],
-            "touches": 5,
-            "confidence": 83,
+            "touches": 4,
+            "confidence": 58,
             "source_summary": "60-min S/R (3 touches) + Daily S/R (1 touches)",
-            "reasoning": "Created by 60-min S/R (3 touches), Daily S/R (1 touches), Yesterday High. Previous session extremes often mark the boundary of yesterday's buyer and seller battle. High confluence - multiple independent sources confirm this level. If it breaks cleanly, the next target is $259.00 and the broken level can flip into resistance."
+            "reasoning": "Created by 60-min S/R (3 touches), Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $259.00 and the broken level can flip into resistance."
           },
           {
             "price": 259.0,
@@ -161,14 +160,14 @@
         },
         {
           "title": "Level Confluence",
-          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $260.00 at 83% confidence from 60-min S/R (3 touches), Daily S/R (1 touches), Yesterday High. Average spacing is $2.90 which gives balanced room for workable intraday risk-to-reward planning."
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $258.00 at 61% confidence from 60-min S/R (3 touches), Daily S/R (2 touches). Average spacing is $1.60 which gives balanced room for workable intraday risk-to-reward planning."
         },
         {
           "title": "Catalyst / Risk",
           "body": "ATR is 2.1%, supportive of normal next-session expansion without being disorderly. Put/call volume ratio is 0.37, showing bullish options positioning. \u26a0 Relative volume is only 0.94x the 20-day average, so follow-through may need confirmation after the open. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
         }
       ],
-      "ntz_comment": "Wide NTZ at 2.32% of price. Wait for a clean breakout beyond the box before forcing entries."
+      "ntz_comment": "Wide NTZ at 3.09% of price. Wait for a clean breakout beyond the box before forcing entries."
     },
     {
       "ticker": "AAPL",
@@ -216,10 +215,10 @@
       "ntz": {
         "pm_high": 340.65,
         "pm_low": 330.75,
-        "yd_high": 341.57,
-        "yd_low": 335.9,
-        "ntz_upper": 341.57,
-        "ntz_lower": 330.75
+        "yd_high": 338.61,
+        "yd_low": 330.7,
+        "ntz_upper": 340.65,
+        "ntz_lower": 330.7
       },
       "levels": {
         "up": [
@@ -231,7 +230,17 @@
             "touches": 7,
             "confidence": 49,
             "source_summary": "60-min S/R (7 touches)",
-            "reasoning": "Created by 60-min S/R (7 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $339.50 and the broken level can flip into support."
+            "reasoning": "Created by 60-min S/R (7 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $338.50 and the broken level can flip into support."
+          },
+          {
+            "price": 338.5,
+            "sources": [
+              "Previous Session High"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Previous Session High",
+            "reasoning": "Created by Previous Session High. Previous session extremes often mark the boundary of the last session's buyer and seller battle. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $339.50 and the broken level can flip into support."
           },
           {
             "price": 339.5,
@@ -242,17 +251,7 @@
             "touches": 4,
             "confidence": 58,
             "source_summary": "60-min S/R (3 touches) + Daily S/R (1 touches)",
-            "reasoning": "Created by 60-min S/R (3 touches), Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $340.50 and the broken level can flip into support."
-          },
-          {
-            "price": 340.5,
-            "sources": [
-              "Pre-market High"
-            ],
-            "touches": 1,
-            "confidence": 35,
-            "source_summary": "Pre-market High",
-            "reasoning": "Created by Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+            "reasoning": "Created by 60-min S/R (3 touches), Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
           }
         ],
         "down": [
@@ -260,13 +259,12 @@
             "price": 335.5,
             "sources": [
               "60-min S/R (7 touches)",
-              "8 EMA (Daily)",
-              "Yesterday Low"
+              "8 EMA (Daily)"
             ],
-            "touches": 9,
-            "confidence": 89,
+            "touches": 8,
+            "confidence": 69,
             "source_summary": "60-min S/R (7 touches) + 8 EMA (Daily)",
-            "reasoning": "Created by 60-min S/R (7 touches), 8 EMA (Daily), Yesterday Low. Previous session extremes often mark the boundary of yesterday's buyer and seller battle. High confluence - multiple independent sources confirm this level. If it breaks cleanly, the next target is $334.00 and the broken level can flip into resistance."
+            "reasoning": "Created by 60-min S/R (7 touches), 8 EMA (Daily). Moving averages act as dynamic support and resistance watched by systematic participants. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, the next target is $334.00 and the broken level can flip into resistance."
           },
           {
             "price": 334.0,
@@ -284,12 +282,12 @@
             "price": 331.5,
             "sources": [
               "60-min S/R (7 touches)",
-              "Pre-market Low"
+              "Prior Pre-market Low"
             ],
             "touches": 8,
             "confidence": 66,
-            "source_summary": "60-min S/R (7 touches) + Pre-market Low",
-            "reasoning": "Created by 60-min S/R (7 touches), Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+            "source_summary": "60-min S/R (7 touches) + Prior Pre-market Low",
+            "reasoning": "Created by 60-min S/R (7 touches), Prior Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
           }
         ]
       },
@@ -322,14 +320,14 @@
         },
         {
           "title": "Level Confluence",
-          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $335.50 at 89% confidence from 60-min S/R (7 touches), 8 EMA (Daily), Yesterday Low. Average spacing is $1.80 which gives balanced room for workable intraday risk-to-reward planning."
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $334.00 at 88% confidence from 60-min S/R (8 touches), Daily S/R (1 touches), 20 EMA (Daily). Average spacing is $1.60 which gives balanced room for workable intraday risk-to-reward planning."
         },
         {
           "title": "Catalyst / Risk",
           "body": "ATR is 1.9%, supportive of normal next-session expansion without being disorderly. Put/call volume ratio is 0.56, which is fairly balanced for sentiment context. Relative volume is 1.00x the 20-day average, showing tradable participation. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
         }
       ],
-      "ntz_comment": "Wide NTZ at 3.21% of price. Wait for a clean breakout beyond the box before forcing entries."
+      "ntz_comment": "Wide NTZ at 2.96% of price. Wait for a clean breakout beyond the box before forcing entries."
     },
     {
       "ticker": "GOOGL",
@@ -377,10 +375,10 @@
       "ntz": {
         "pm_high": 352.48,
         "pm_low": 349.4,
-        "yd_high": 356.83,
-        "yd_low": 346.52,
-        "ntz_upper": 356.83,
-        "ntz_lower": 346.52
+        "yd_high": 354.7,
+        "yd_low": 350.31,
+        "ntz_upper": 354.7,
+        "ntz_lower": 349.4
       },
       "levels": {
         "up": [
@@ -388,22 +386,23 @@
             "price": 352.5,
             "sources": [
               "Daily S/R (1 touches)",
-              "Pre-market High"
+              "Prior Pre-market High"
             ],
             "touches": 2,
             "confidence": 49,
-            "source_summary": "Daily S/R (1 touches) + Pre-market High",
-            "reasoning": "Created by Daily S/R (1 touches), Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $354.00 and the broken level can flip into support."
+            "source_summary": "Daily S/R (1 touches) + Prior Pre-market High",
+            "reasoning": "Created by Daily S/R (1 touches), Prior Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $354.00 and the broken level can flip into support."
           },
           {
             "price": 354.0,
             "sources": [
-              "60-min S/R (4 touches)"
+              "60-min S/R (4 touches)",
+              "Previous Session High"
             ],
-            "touches": 4,
-            "confidence": 38,
-            "source_summary": "60-min S/R (4 touches)",
-            "reasoning": "Created by 60-min S/R (4 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $355.00 and the broken level can flip into support."
+            "touches": 5,
+            "confidence": 63,
+            "source_summary": "60-min S/R (4 touches) + Previous Session High",
+            "reasoning": "Created by 60-min S/R (4 touches), Previous Session High. Previous session extremes often mark the boundary of the last session's buyer and seller battle. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $355.00 and the broken level can flip into support."
           },
           {
             "price": 355.0,
@@ -426,29 +425,28 @@
             "touches": 5,
             "confidence": 44,
             "source_summary": "60-min S/R (5 touches)",
-            "reasoning": "Created by 60-min S/R (5 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $349.50 and the broken level can flip into resistance."
+            "reasoning": "Created by 60-min S/R (5 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $350.50 and the broken level can flip into resistance."
+          },
+          {
+            "price": 350.5,
+            "sources": [
+              "Previous Session Low"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Previous Session Low",
+            "reasoning": "Created by Previous Session Low. Previous session extremes often mark the boundary of the last session's buyer and seller battle. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $349.50 and the broken level can flip into resistance."
           },
           {
             "price": 349.5,
             "sources": [
               "Daily S/R (1 touches)",
-              "Pre-market Low"
+              "Prior Pre-market Low"
             ],
             "touches": 2,
             "confidence": 48,
-            "source_summary": "Daily S/R (1 touches) + Pre-market Low",
-            "reasoning": "Created by Daily S/R (1 touches), Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $348.50 and the broken level can flip into resistance."
-          },
-          {
-            "price": 348.5,
-            "sources": [
-              "60-min S/R (6 touches)",
-              "Daily S/R (1 touches)"
-            ],
-            "touches": 7,
-            "confidence": 68,
-            "source_summary": "60-min S/R (6 touches) + Daily S/R (1 touches)",
-            "reasoning": "Created by 60-min S/R (6 touches), Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+            "source_summary": "Daily S/R (1 touches) + Prior Pre-market Low",
+            "reasoning": "Created by Daily S/R (1 touches), Prior Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
           }
         ]
       },
@@ -481,14 +479,14 @@
         },
         {
           "title": "Level Confluence",
-          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $348.50 at 68% confidence from 60-min S/R (6 touches), Daily S/R (1 touches). Average spacing is $1.30 which gives tight room for quicker scalp-style risk-to-reward planning."
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $354.00 at 63% confidence from 60-min S/R (4 touches), Previous Session High. Average spacing is $1.10 which gives tight room for quicker scalp-style risk-to-reward planning."
         },
         {
           "title": "Catalyst / Risk",
           "body": "ATR is 2.5%, supportive of normal next-session expansion without being disorderly. Put/call volume ratio is 0.23, showing bullish options positioning. \u26a0 Relative volume is only 0.66x the 20-day average, so follow-through may need confirmation after the open. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
         }
       ],
-      "ntz_comment": "Wide NTZ at 2.93% of price. Wait for a clean breakout beyond the box before forcing entries."
+      "ntz_comment": "Wide NTZ at 1.51% of price. Wait for a clean breakout beyond the box before forcing entries."
     },
     {
       "ticker": "TSLA",
@@ -536,10 +534,10 @@
       "ntz": {
         "pm_high": 382.38,
         "pm_low": 377.3,
-        "yd_high": 375.96,
-        "yd_low": 368.03,
-        "ntz_upper": 382.38,
-        "ntz_lower": 368.03
+        "yd_high": 388.56,
+        "yd_low": 379.71,
+        "ntz_upper": 388.56,
+        "ntz_lower": 377.3
       },
       "levels": {
         "up": [
@@ -547,12 +545,12 @@
             "price": 383.0,
             "sources": [
               "60-min S/R (1 touches)",
-              "Pre-market High"
+              "Prior Pre-market High"
             ],
             "touches": 2,
             "confidence": 49,
-            "source_summary": "60-min S/R (1 touches) + Pre-market High",
-            "reasoning": "Created by 60-min S/R (1 touches), Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $384.50 and the broken level can flip into support."
+            "source_summary": "60-min S/R (1 touches) + Prior Pre-market High",
+            "reasoning": "Created by 60-min S/R (1 touches), Prior Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $384.50 and the broken level can flip into support."
           },
           {
             "price": 384.5,
@@ -585,30 +583,28 @@
             "touches": 8,
             "confidence": 68,
             "source_summary": "60-min S/R (5 touches) + Daily S/R (3 touches)",
-            "reasoning": "Created by 60-min S/R (5 touches), Daily S/R (3 touches). Repeated support and resistance touches make this a proven supply-demand zone. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, the next target is $377.50 and the broken level can flip into resistance."
+            "reasoning": "Created by 60-min S/R (5 touches), Daily S/R (3 touches). Repeated support and resistance touches make this a proven supply-demand zone. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, the next target is $379.50 and the broken level can flip into resistance."
+          },
+          {
+            "price": 379.5,
+            "sources": [
+              "Previous Session Low"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Previous Session Low",
+            "reasoning": "Created by Previous Session Low. Previous session extremes often mark the boundary of the last session's buyer and seller battle. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $377.50 and the broken level can flip into resistance."
           },
           {
             "price": 377.5,
             "sources": [
               "60-min S/R (4 touches)",
-              "Pre-market Low"
+              "Prior Pre-market Low"
             ],
             "touches": 5,
             "confidence": 62,
-            "source_summary": "60-min S/R (4 touches) + Pre-market Low",
-            "reasoning": "Created by 60-min S/R (4 touches), Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $376.50 and the broken level can flip into resistance."
-          },
-          {
-            "price": 376.5,
-            "sources": [
-              "60-min S/R (2 touches)",
-              "Daily S/R (1 touches)",
-              "Yesterday High"
-            ],
-            "touches": 4,
-            "confidence": 76,
-            "source_summary": "60-min S/R (2 touches) + Daily S/R (1 touches)",
-            "reasoning": "Created by 60-min S/R (2 touches), Daily S/R (1 touches), Yesterday High. Previous session extremes often mark the boundary of yesterday's buyer and seller battle. Moderate confluence - valid but may not hold on heavy volume. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+            "source_summary": "60-min S/R (4 touches) + Prior Pre-market Low",
+            "reasoning": "Created by 60-min S/R (4 touches), Prior Pre-market Low. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
           }
         ]
       },
@@ -641,14 +637,14 @@
         },
         {
           "title": "Level Confluence",
-          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $376.50 at 76% confidence from 60-min S/R (2 touches), Daily S/R (1 touches), Yesterday High. Average spacing is $1.90 which gives balanced room for workable intraday risk-to-reward planning."
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $380.50 at 68% confidence from 60-min S/R (5 touches), Daily S/R (3 touches). Average spacing is $1.70 which gives balanced room for workable intraday risk-to-reward planning."
         },
         {
           "title": "Catalyst / Risk",
           "body": "ATR is 2.9%, supportive of normal next-session expansion without being disorderly. Put/call volume ratio is 0.60, which is fairly balanced for sentiment context. Relative volume is 1.09x the 20-day average, showing tradable participation. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
         }
       ],
-      "ntz_comment": "Wide NTZ at 3.75% of price. Wait for a clean breakout beyond the box before forcing entries."
+      "ntz_comment": "Wide NTZ at 2.94% of price. Wait for a clean breakout beyond the box before forcing entries."
     },
     {
       "ticker": "MSFT",
@@ -696,10 +692,10 @@
       "ntz": {
         "pm_high": 529.75,
         "pm_low": 523.48,
-        "yd_high": 533.51,
-        "yd_low": 518.79,
-        "ntz_upper": 533.51,
-        "ntz_lower": 518.79
+        "yd_high": 537.22,
+        "yd_low": 526.24,
+        "ntz_upper": 537.22,
+        "ntz_lower": 523.48
       },
       "levels": {
         "up": [
@@ -711,7 +707,17 @@
             "touches": 1,
             "confidence": 35,
             "source_summary": "60-min S/R (1 touches)",
-            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $542.00 and the broken level can flip into support."
+            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $537.00 and the broken level can flip into support."
+          },
+          {
+            "price": 537.0,
+            "sources": [
+              "Previous Session High"
+            ],
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "Previous Session High",
+            "reasoning": "Created by Previous Session High. Previous session extremes often mark the boundary of the last session's buyer and seller battle. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $542.00 and the broken level can flip into support."
           },
           {
             "price": 542.0,
@@ -721,30 +727,19 @@
             "touches": 1,
             "confidence": 35,
             "source_summary": "Daily S/R (1 touches)",
-            "reasoning": "Created by Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $548.00 and the broken level can flip into support."
-          },
-          {
-            "price": 548.0,
-            "sources": [
-              "ATR Projection"
-            ],
-            "touches": 1,
-            "confidence": 38,
-            "source_summary": "ATR Projection",
-            "reasoning": "Created by ATR Projection. ATR-based projections estimate measured-move continuation when nearby structure is thin beyond the immediate range. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+            "reasoning": "Created by Daily S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
           }
         ],
         "down": [
           {
             "price": 534.0,
             "sources": [
-              "60-min S/R (1 touches)",
-              "Yesterday High"
+              "60-min S/R (1 touches)"
             ],
-            "touches": 2,
-            "confidence": 49,
-            "source_summary": "60-min S/R (1 touches) + Yesterday High",
-            "reasoning": "Created by 60-min S/R (1 touches), Yesterday High. Previous session extremes often mark the boundary of yesterday's buyer and seller battle. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $531.50 and the broken level can flip into resistance."
+            "touches": 1,
+            "confidence": 35,
+            "source_summary": "60-min S/R (1 touches)",
+            "reasoning": "Created by 60-min S/R (1 touches). Repeated support and resistance touches make this a proven supply-demand zone. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, the next target is $531.50 and the broken level can flip into resistance."
           },
           {
             "price": 531.5,
@@ -760,12 +755,12 @@
             "price": 529.0,
             "sources": [
               "60-min S/R (1 touches)",
-              "Pre-market High"
+              "Prior Pre-market High"
             ],
             "touches": 2,
             "confidence": 47,
-            "source_summary": "60-min S/R (1 touches) + Pre-market High",
-            "reasoning": "Created by 60-min S/R (1 touches), Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
+            "source_summary": "60-min S/R (1 touches) + Prior Pre-market High",
+            "reasoning": "Created by 60-min S/R (1 touches), Prior Pre-market High. Pre-market extremes can attract opening auction liquidity and gap-fill reactions. Lower confluence - treat it as an approximate zone rather than an exact line. If it breaks cleanly, expect a move toward the next visible pocket of liquidity."
           }
         ]
       },
@@ -798,14 +793,14 @@
         },
         {
           "title": "Level Confluence",
-          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $534.00 at 49% confidence from 60-min S/R (1 touches), Yesterday High. Average spacing is $3.80 which gives balanced room for workable intraday risk-to-reward planning."
+          "body": "Found 3 clustered levels above and 3 below the current price. The best-defined level is $529.00 at 47% confidence from 60-min S/R (1 touches), Prior Pre-market High. Average spacing is $2.60 which gives balanced room for workable intraday risk-to-reward planning."
         },
         {
           "title": "Catalyst / Risk",
           "body": "ATR is 2.4%, supportive of normal next-session expansion without being disorderly. \u26a0 RSI at 72.3 is in an extreme zone, so continuation trades need tighter invalidation. Put/call volume ratio is 0.41, showing bullish options positioning. \u26a0 Relative volume is only 0.83x the 20-day average, so follow-through may need confirmation after the open. No external macro calendar feed is configured in this run, so event risk should be checked separately before the bell."
         }
       ],
-      "ntz_comment": "Wide NTZ at 2.75% of price. Wait for a clean breakout beyond the box before forcing entries."
+      "ntz_comment": "Wide NTZ at 2.57% of price. Wait for a clean breakout beyond the box before forcing entries."
     }
   ],
   "failures": []
