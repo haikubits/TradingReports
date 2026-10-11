@@ -198,7 +198,7 @@ def compute_volume_status(daily: pd.DataFrame) -> dict[str, Any]:
 
 
 def compute_ntz(daily: pd.DataFrame, hourly: pd.DataFrame) -> dict[str, float]:
-    yd = daily.iloc[-2] if len(daily) > 1 else daily.iloc[-1]
+    yd = daily.iloc[-1]
     yd_high = safe_number(yd["High"], 0.0)
     yd_low = safe_number(yd["Low"], 0.0)
 
@@ -296,12 +296,12 @@ def compute_levels(hourly: pd.DataFrame, daily: pd.DataFrame, current_price: flo
         if not math.isnan(val):
             ma_entries.append({"price": round_price(val), "source": label})
 
-    yd = daily.iloc[-2] if len(daily) > 1 else daily.iloc[-1]
+    yd = daily.iloc[-1]
     fixed_entries = [
-        {"price": round_price(safe_number(yd["High"], current_price)), "source": "Yesterday High"},
-        {"price": round_price(safe_number(yd["Low"], current_price)), "source": "Yesterday Low"},
-        {"price": round_price(ntz["pm_high"]), "source": "Pre-market High"},
-        {"price": round_price(ntz["pm_low"]), "source": "Pre-market Low"},
+        {"price": round_price(safe_number(yd["High"], current_price)), "source": "Previous Session High"},
+        {"price": round_price(safe_number(yd["Low"], current_price)), "source": "Previous Session Low"},
+        {"price": round_price(ntz["pm_high"]), "source": "Prior Pre-market High"},
+        {"price": round_price(ntz["pm_low"]), "source": "Prior Pre-market Low"},
     ]
 
     level_map: dict[float, dict[str, Any]] = {}
@@ -606,8 +606,8 @@ def confidence_text(confidence: int) -> str:
 
 
 def level_market_mechanic(sources: list[str]) -> str:
-    if any("Yesterday" in source for source in sources):
-        return "Previous session extremes often mark the boundary of yesterday's buyer and seller battle."
+    if any("Previous Session" in source for source in sources):
+        return "Previous session extremes often mark the boundary of the last session's buyer and seller battle."
     if any("SMA" in source or "EMA" in source for source in sources):
         return "Moving averages act as dynamic support and resistance watched by systematic participants."
     if any("Pre-market" in source for source in sources):
@@ -762,10 +762,10 @@ def render_reason_card(card: dict[str, str]) -> str:
 def render_ntz(stock: dict[str, Any]) -> str:
     ntz = stock["ntz"]
     items = [
-        ("PM High", format_currency(ntz["pm_high"])),
-        ("PM Low", format_currency(ntz["pm_low"])),
-        ("YD High", format_currency(ntz["yd_high"])),
-        ("YD Low", format_currency(ntz["yd_low"])),
+        ("Prior PM High", format_currency(ntz["pm_high"])),
+        ("Prior PM Low", format_currency(ntz["pm_low"])),
+        ("Prior High", format_currency(ntz["yd_high"])),
+        ("Prior Low", format_currency(ntz["yd_low"])),
     ]
     rows = "".join(
         f'<div class="ntz-item"><div class="ntz-label">{label}</div><div class="price">{value}</div></div>'
@@ -774,7 +774,7 @@ def render_ntz(stock: dict[str, Any]) -> str:
     return (
         '<div class="ntz-box">'
         '<div class="ntz-title">No Trading Zone</div>'
-        f'<div class="ntz-note">{esc(stock["ntz_comment"])}</div>'
+        f'<div class="ntz-note">{esc(stock["ntz_comment"])} Prior PM levels are from the last completed session; refresh before the next open.</div>'
         f'<div class="ntz-grid">{rows}</div>'
         '</div>'
     )
@@ -1154,7 +1154,7 @@ button {{ font: inherit; }}
   </section>
   <section class="stats-grid">{stats_html}</section>
   <section class="stock-list">{cards_html}</section>
-  {failures_html}
+{failures_html}
   <div class="footer-note">This report is for educational/research purposes only. Not financial advice. All levels are generated from technical analysis. Past performance does not guarantee future results.</div>
 </div>
 <script>
