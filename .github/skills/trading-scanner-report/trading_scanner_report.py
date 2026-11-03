@@ -1154,7 +1154,7 @@ button {{ font: inherit; }}
   </section>
   <section class="stats-grid">{stats_html}</section>
   <section class="stock-list">{cards_html}</section>
-  {failures_html}
+{failures_html}
   <div class="footer-note">This report is for educational/research purposes only. Not financial advice. All levels are generated from technical analysis. Past performance does not guarantee future results.</div>
 </div>
 <script>

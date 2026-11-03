@@ -103,6 +103,7 @@ REPORT_TS=$(date -u +%Y-%m-%d_%H-%M)
 REPO_ROOT="codeRefs/TradingReports"
 OUT_DIR="$REPO_ROOT/Artifacts/$REPORT_TS"
 mkdir -p "$OUT_DIR"
+cp "$REPO_ROOT/.github/skills/trading-scanner-report/trading_scanner_report.py" "$OUT_DIR/trading_scanner_report.py"
 python3 "$OUT_DIR/trading_scanner_report.py"
 ```
 
@@ -114,7 +115,7 @@ The generated `README.md` should contain the GitHub Pages URL:
 
 Use a short heredoc:
 ```bash
-REPORT_TS="YYYY-MM-DD_HH-MM"
+export REPORT_TS="YYYY-MM-DD_HH-MM"
 python3 - <<'PY'
 import json
 import os
@@ -182,7 +183,7 @@ Before finalizing, validate all of the following inside the selected timestamped
 
 Example validation snippet:
 ```bash
-REPORT_TS="YYYY-MM-DD_HH-MM"
+export REPORT_TS="YYYY-MM-DD_HH-MM"
 python3 - <<'PY'
 import json
 import os
@@ -211,11 +212,10 @@ Example flow:
 REPORT_TS="YYYY-MM-DD_HH-MM"
 cd codeRefs/TradingReports
 git add "Artifacts/$REPORT_TS"
+git diff --cached --check
 if ! git diff --cached --quiet; then
-  git commit -m "TradingReports: Add scanner artifacts for $REPORT_TS"
-  git commit --amend --no-edit -m "TradingReports: Add scanner artifacts for $REPORT_TS
-
-Co-authored-by: Azure SRE Agent <noreply@microsoft.com>"
+  git commit -m "TradingReports: Add scanner artifacts for $REPORT_TS" \
+    -m "Co-authored-by: Azure SRE Agent <noreply@microsoft.com>"
   git push origin main
 fi
 ```
