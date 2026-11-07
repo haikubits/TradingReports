@@ -81,13 +81,22 @@ def next_trading_day(now_et: datetime) -> datetime:
 
     for market_open in schedule["market_open"]:
         market_open_et = market_open.tz_convert(ET)
-        if market_open_et.date() > now_et.date():
+        if market_open_et > now_et:
             return market_open_et
 
     fallback = now_et + timedelta(days=1)
     while fallback.weekday() >= 5:
         fallback += timedelta(days=1)
     return fallback
+
+
+def completed_daily(daily: pd.DataFrame, now_et: datetime) -> pd.DataFrame:
+    if daily.empty or daily.index[-1].date() != now_et.date():
+        return daily
+    schedule = mcal.get_calendar("NYSE").schedule(start_date=now_et.date(), end_date=now_et.date())
+    if schedule.empty or now_et < schedule["market_close"].iloc[0].tz_convert(ET):
+        return daily.iloc[:-1]
+    return daily
 
 
 def fetch_raw_data(ticker_str: str) -> dict[str, Any]:
@@ -197,32 +206,34 @@ def compute_volume_status(daily: pd.DataFrame) -> dict[str, Any]:
     return {"ratio": round(ratio, 2), "label": label, "today": int(today_vol), "avg20": int(avg_vol)}
 
 
-def compute_ntz(daily: pd.DataFrame, hourly: pd.DataFrame) -> dict[str, float]:
-    yd = daily.iloc[-2] if len(daily) > 1 else daily.iloc[-1]
+def compute_ntz(daily: pd.DataFrame, hourly: pd.DataFrame, session_date: datetime, now_et: datetime) -> dict[str, Any]:
+    daily = completed_daily(daily, now_et)
+    if daily.empty:
+        raise ValueError("No completed daily candles available for NTZ")
+    yd = daily.iloc[-2] if daily.index[-1].date() >= session_date.date() and len(daily) > 1 else daily.iloc[-1]
     yd_high = safe_number(yd["High"], 0.0)
     yd_low = safe_number(yd["Low"], 0.0)
 
-    if hourly.empty:
-        pm_high = yd_high
-        pm_low = yd_low
-    else:
+    pre_mkt = pd.DataFrame()
+    if not hourly.empty:
         hourly_local = hourly.copy()
         hourly_local.index = ensure_timezone(hourly_local.index)
-        session_date = hourly_local.index[-1].date()
-        today_ext = hourly_local[hourly_local.index.date == session_date]
-        pre_mkt = today_ext[(today_ext.index.hour < 9) | ((today_ext.index.hour == 9) & (today_ext.index.minute < 30))]
-        if pre_mkt.empty:
-            pre_mkt = today_ext.iloc[:3]
-        pm_high = safe_number(pre_mkt["High"].max(), yd_high)
-        pm_low = safe_number(pre_mkt["Low"].min(), yd_low)
+        today_ext = hourly_local[hourly_local.index.date == session_date.date()]
+        pre_mkt = today_ext[today_ext.index.hour < 9]
+    pm_high = safe_number(pre_mkt["High"].max()) if not pre_mkt.empty else None
+    pm_low = safe_number(pre_mkt["Low"].min()) if not pre_mkt.empty else None
+    if pm_high is not None and math.isnan(pm_high):
+        pm_high = None
+    if pm_low is not None and math.isnan(pm_low):
+        pm_low = None
 
     return {
-        "pm_high": round(pm_high, 2),
-        "pm_low": round(pm_low, 2),
+        "pm_high": round(pm_high, 2) if pm_high is not None else None,
+        "pm_low": round(pm_low, 2) if pm_low is not None else None,
         "yd_high": round(yd_high, 2),
         "yd_low": round(yd_low, 2),
-        "ntz_upper": round(max(pm_high, yd_high), 2),
-        "ntz_lower": round(min(pm_low, yd_low), 2),
+        "ntz_upper": round(max(pm_high, yd_high), 2) if pm_high is not None else round(yd_high, 2),
+        "ntz_lower": round(min(pm_low, yd_low), 2) if pm_low is not None else round(yd_low, 2),
     }
 
 
@@ -296,13 +307,15 @@ def compute_levels(hourly: pd.DataFrame, daily: pd.DataFrame, current_price: flo
         if not math.isnan(val):
             ma_entries.append({"price": round_price(val), "source": label})
 
-    yd = daily.iloc[-2] if len(daily) > 1 else daily.iloc[-1]
     fixed_entries = [
-        {"price": round_price(safe_number(yd["High"], current_price)), "source": "Yesterday High"},
-        {"price": round_price(safe_number(yd["Low"], current_price)), "source": "Yesterday Low"},
-        {"price": round_price(ntz["pm_high"]), "source": "Pre-market High"},
-        {"price": round_price(ntz["pm_low"]), "source": "Pre-market Low"},
+        {"price": round_price(ntz["yd_high"]), "source": "Yesterday High"},
+        {"price": round_price(ntz["yd_low"]), "source": "Yesterday Low"},
     ]
+    if ntz["pm_high"] is not None and ntz["pm_low"] is not None:
+        fixed_entries.extend([
+            {"price": round_price(ntz["pm_high"]), "source": "Pre-market High"},
+            {"price": round_price(ntz["pm_low"]), "source": "Pre-market Low"},
+        ])
 
     level_map: dict[float, dict[str, Any]] = {}
     merge_threshold = current_price * 0.002
@@ -361,7 +374,7 @@ def compute_levels(hourly: pd.DataFrame, daily: pd.DataFrame, current_price: flo
                         "price": candidate,
                         "sources": ["ATR Projection"],
                         "touches": 1,
-                        "confidence": max(36, 46 - (len(levels) * 4)),
+                        "confidence": max(15, 30 - (len(levels) * 4)),
                         "source_summary": "ATR Projection",
                     }
                 )
@@ -589,6 +602,8 @@ def catalyst_reasoning(stock: dict[str, Any], macro_events: list[str], fed_speak
 
 def ntz_comment(stock: dict[str, Any]) -> str:
     ntz = stock["ntz"]
+    if ntz["pm_high"] is None or ntz["pm_low"] is None:
+        return "Next-session premarket is pending; the zone currently uses only the previous session range. Recheck before the open."
     width_pct = ((ntz["ntz_upper"] - ntz["ntz_lower"]) / stock["price"] * 100) if stock["price"] else 0.0
     if width_pct > 1.5:
         return f"Wide NTZ at {width_pct:.2f}% of price. Wait for a clean breakout beyond the box before forcing entries."
@@ -642,6 +657,12 @@ def build_report_data(universe: list[str] | None = None, top_n: int = 5) -> dict
     for ticker in universe:
         try:
             raw = fetch_raw_data(ticker)
+            raw["daily"] = completed_daily(raw["daily"], now_et)
+            if raw["daily"].empty:
+                raise ValueError(f"No completed daily candles available for {ticker}")
+            close = raw["daily"]["Close"]
+            raw["last_price"] = safe_number(close.iloc[-1])
+            raw["prev_close"] = safe_number(close.iloc[-2]) if len(close) > 1 else raw["last_price"]
             scored = score_stock(raw)
             scored["_raw"] = raw
             all_scores.append(scored)
@@ -664,7 +685,7 @@ def build_report_data(universe: list[str] | None = None, top_n: int = 5) -> dict
                 vwap_pos = "Above" if stock["price"] > vwap else "Below"
         stock["vwap"] = round(vwap, 2) if not math.isnan(vwap) else None
         stock["vwap_pos"] = vwap_pos
-        stock["ntz"] = compute_ntz(raw["daily"], raw["hourly"])
+        stock["ntz"] = compute_ntz(raw["daily"], raw["hourly"], next_session, now_et)
         stock["levels"] = compute_levels(raw["hourly"], raw["daily"], stock["price"], stock["ntz"])
         stock["indicator_chips"] = [
             {"label": "200 SMA", "value": stock["sma200_pos"]},
@@ -762,8 +783,8 @@ def render_reason_card(card: dict[str, str]) -> str:
 def render_ntz(stock: dict[str, Any]) -> str:
     ntz = stock["ntz"]
     items = [
-        ("PM High", format_currency(ntz["pm_high"])),
-        ("PM Low", format_currency(ntz["pm_low"])),
+        ("PM High", format_currency(ntz["pm_high"]) if ntz["pm_high"] is not None else "Pending"),
+        ("PM Low", format_currency(ntz["pm_low"]) if ntz["pm_low"] is not None else "Pending"),
         ("YD High", format_currency(ntz["yd_high"])),
         ("YD Low", format_currency(ntz["yd_low"])),
     ]
@@ -1154,7 +1175,7 @@ button {{ font: inherit; }}
   </section>
   <section class="stats-grid">{stats_html}</section>
   <section class="stock-list">{cards_html}</section>
-  {failures_html}
+{failures_html}
   <div class="footer-note">This report is for educational/research purposes only. Not financial advice. All levels are generated from technical analysis. Past performance does not guarantee future results.</div>
 </div>
 <script>

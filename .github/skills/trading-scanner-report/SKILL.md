@@ -40,7 +40,7 @@ Do not use this skill for Azure diagnostics or infrastructure operations.
 Write the published artifacts under a timestamped report folder in the repository:
 `codeRefs/TradingReports/Artifacts/YYYY-MM-DD_HH-MM/`
 
-The timestamp folder must be created from the report generation time and reused for every artifact from that run.
+The timestamp folder must be created from the report generation time and reused for every artifact from that run. On a trading day before the opening bell, the report targets today's session; after the open, it targets the next trading session.
 
 Expected files inside the timestamped folder:
 - `trading_scanner_report.py`
@@ -82,7 +82,7 @@ Unless the user specifies otherwise, use:
    - daily trend direction and strength
    - volume ratio vs 20-day average
    - options put/call ratio and total options volume
-   - NTZ using yesterday and premarket ranges
+   - NTZ using the latest completed session and next-session premarket only when available
    - clustered support and resistance levels
 5. Score each ticker and select the top setups by conviction.
 6. Build a self-contained HTML report with inline CSS and inline JavaScript.
@@ -103,6 +103,7 @@ REPORT_TS=$(date -u +%Y-%m-%d_%H-%M)
 REPO_ROOT="codeRefs/TradingReports"
 OUT_DIR="$REPO_ROOT/Artifacts/$REPORT_TS"
 mkdir -p "$OUT_DIR"
+cp "$REPO_ROOT/.github/skills/trading-scanner-report/trading_scanner_report.py" "$OUT_DIR/trading_scanner_report.py"
 python3 "$OUT_DIR/trading_scanner_report.py"
 ```
 
@@ -112,9 +113,9 @@ The generated `README.md` should contain the GitHub Pages URL:
 
 ### For targeted validation
 
-Use a short heredoc:
+Use a short heredoc with the timestamp exported to Python:
 ```bash
-REPORT_TS="YYYY-MM-DD_HH-MM"
+export REPORT_TS="YYYY-MM-DD_HH-MM"
 python3 - <<'PY'
 import json
 import os
@@ -152,6 +153,8 @@ The generated report should include:
 - a clean light/dark theme toggle
 - a self-contained HTML file with no external dependencies
 
+Until the next session's premarket candles exist, show PM High/Low as Pending and use only completed daily candles for scores, moving averages, ATR, pivots, and yesterday's levels. Do not present prior-session premarket as next-session premarket. With 60-minute candles, exclude bars starting at 9:00 ET or later, which can span the 9:30 open; the last half-hour may therefore be unavailable.
+
 ## Level Engine Rules
 
 The level engine must try structural levels first:
@@ -165,7 +168,7 @@ If there are fewer than 3 valid upside or downside levels, backfill with ATR-bas
 - 3 upside levels
 - 3 downside levels
 
-ATR projection levels should be labeled with source `ATR Projection` and should have lower confidence than structurally confirmed levels.
+ATR projection levels should be labeled with source `ATR Projection` and should have lower confidence than structurally confirmed levels (the structural confidence floor is 35%).
 
 ## Verification Checklist
 
@@ -175,14 +178,17 @@ Before finalizing, validate all of the following inside the selected timestamped
 - `README.md` exists and is non-empty
 - `README.md` contains the GitHub Pages URL for the same run folder's `trading-report.html`
 - `failures` is empty when data fetches succeed
+- verify that the most recent daily candle is from the latest completed session; a zero VIX or stale market data is not a usable report
+- before next-session premarket, PM High/Low are null/Pending and yesterday is the latest completed session
 - each selected stock has `len(levels['up']) == 3`
 - each selected stock has `len(levels['down']) == 3`
 - the HTML includes the average conviction summary text
 - the HTML is self-contained and does not depend on external scripts or stylesheets
+- stage only this run's artifact folder and run `git diff --cached --check` before committing
 
 Example validation snippet:
 ```bash
-REPORT_TS="YYYY-MM-DD_HH-MM"
+export REPORT_TS="YYYY-MM-DD_HH-MM"
 python3 - <<'PY'
 import json
 import os
@@ -211,12 +217,11 @@ Example flow:
 REPORT_TS="YYYY-MM-DD_HH-MM"
 cd codeRefs/TradingReports
 git add "Artifacts/$REPORT_TS"
+git diff --cached --check
 if ! git diff --cached --quiet; then
-  git commit -m "TradingReports: Add scanner artifacts for $REPORT_TS"
-  git commit --amend --no-edit -m "TradingReports: Add scanner artifacts for $REPORT_TS
-
-Co-authored-by: Azure SRE Agent <noreply@microsoft.com>"
+  git commit -m "TradingReports: Add scanner artifacts for $REPORT_TS" -m "Co-authored-by: Azure SRE Agent <noreply@microsoft.com>"
   git push origin main
+  git ls-remote origin refs/heads/main
 fi
 ```
 
